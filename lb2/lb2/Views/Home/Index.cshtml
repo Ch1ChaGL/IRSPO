@@ -1,0 +1,30 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+       <h4>@ViewBag.CafeName</h4>
+        <div>
+            <h3>Menu</h3>
+            @Html.ActionLink("Drinks", "DrinkForm")
+        </div>
+        <form action="/My/GetFilm" method="get">
+            <div>
+                <label>Год: </label>
+                <input type="text" name="year" />
+            </div>
+            <div>
+                <label>Название</label>
+                <input type="text" name="filmName" />
+            </div>
+            <input type="submit" value="ok" />
+        </form>
+    </body>
+</html>
+
